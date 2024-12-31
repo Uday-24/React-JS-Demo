@@ -1,0 +1,56 @@
+.about-us-page{
+    margin: 0 5rem;
+}
+.about-us-page h1,
+.about-us-page h3 {
+    text-align: center;
+}
+
+.about-us-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-us-page .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.about-us-page .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.about-us-page .col-md-6,
+.about-us-page .col-md-12 {
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.about-us-page .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.about-us-page .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about-us-page .text-center {
+    text-align: center;
+}
+
+.about-us-page ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.about-us-page li {
+    margin-bottom: 0.5rem;
+}
+
+.about-us-page .mt-5 {
+    margin-top: 3rem;
+}

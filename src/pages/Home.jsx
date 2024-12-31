@@ -1,36 +1,41 @@
 import React from 'react'
-import placeholderImage from '../images/placeholder.jpg';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import './css/Home.css';
 const Home = () => {
     return (
         <>
             <div className="container">
-                <div className="carousel-container w-75 mx-auto mb-5"> {/* Adjust the width of the container */}
-                    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-                        </div>
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img src={placeholderImage} className="d-block w-100" alt="Slide 1" />
-                            </div>
-                            <div className="carousel-item">
-                                <img src={placeholderImage} className="d-block w-100" alt="Slide 2" />
-                            </div>
-                            <div className="carousel-item">
-                                <img src={placeholderImage} className="d-block w-100" alt="Slide 3" />
-                            </div>
-                        </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
-                    </div>
+                <div className="carousel-container">
+                    <Swiper
+                        spaceBetween={30}
+                        effect={'fade'}
+                        navigation={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[EffectFade, Navigation, Pagination]}
+                        loop={true}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <img src="/images/placeholder.jpg" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="/images/nature1.jpg" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="/images/nature3.jpg" />
+                        </SwiperSlide>
+                        
+                    </Swiper>
                 </div>
                 <section>
                     <p>

@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './css/About.css'
 const About = () => {
   return (
     <>
-      <div className="container my-5">
+      <div className="about-us-page container my-5">
         <div className="row">
           <div className="col-md-12 text-center">
             <h1>About Us</h1>
@@ -64,6 +64,7 @@ const About = () => {
           </div>
         </div>
       </div>
+
     </>
   )
 }
